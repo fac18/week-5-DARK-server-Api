@@ -4,6 +4,7 @@ const nock = require('nock');
 const tape = require('tape');
 const config = require("../src/config");
 const getRequest = require("../src/request");
+const grabWeather = require('../src/api')
 
 let apiKey = config.MY_WEATHER_KEY;
 
@@ -12,6 +13,7 @@ tape('api test file is working', t => {
   t.end();
 })
 
+// test getRequest function with weather API
 tape('api request for London,UK works as expected', t => {
   let location = "London,UK";
   // first we make a mock API response using nock
@@ -36,3 +38,5 @@ tape('api request for London,UK works as expected', t => {
     });
   t.end();
 });
+
+// can we test grabWeather in here too i.e. an actual API call (NB. it is necessarily impure)
