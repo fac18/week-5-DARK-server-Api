@@ -3,7 +3,7 @@
 const http = require("http");
 const https = require("https");
 
-const requester = (url, cb) => {
+const getRequest = (url, cb) => {
   /^https/.test(url) ? get(https, url, cb) : get(http, url, cb);
 };
 
@@ -49,4 +49,4 @@ const get = (protocol, url, cb) => {
   });
 };
 
-module.exports = requester;
+module.exports = getRequest;
