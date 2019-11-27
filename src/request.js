@@ -4,10 +4,10 @@ const http = require("http");
 const https = require("https");
 
 const getRequest = (url, cb) => {
-  /^https/.test(url) ? get(https, url, cb) : get(http, url, cb);
-};
-
-const get = (protocol, url, cb) => {
+  // assign appropriate protocol depending on beginning of passed url
+  let protocol = /^https/.test(url) ? https : http;
+  
+  // use get method with whichever protocol is assigned
   protocol.get(url, res => {
     // initialise variables to pass to callback
     let err;
@@ -41,9 +41,11 @@ const get = (protocol, url, cb) => {
 
     // on successful stream, pass constructed response object to callback
     res.on("end", () => {
+      // build response object to pass to callback, including body, status and content-type
       resObj.body = JSON.parse(rawData);
       resObj.statusCode = statusCode;
-      console.log(resObj);
+      resObj.headers = {};
+      resObj.headers['content-type'] = contentType;
       cb(null, resObj);
     });
   });
