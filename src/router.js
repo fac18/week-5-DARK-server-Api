@@ -12,8 +12,8 @@ else if (endpoint.includes("public")) {
 else if (endpoint.includes("search")) {
     handlers.handleData(request, response, endpoint);
 } else {
-    response.writeHead(404); 
-    response.end("404 not found")
+    
+   handlers.handle404(request, response, endpoint);
 }
 
 }
