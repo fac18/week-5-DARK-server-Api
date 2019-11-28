@@ -1,6 +1,7 @@
 const path = require("path");
 const fs = require("fs");
 const grabWeather = require("./api");
+const goOutDecision = require("./logic");
 
 const handleHome = (request, response) => {
   const filePath = path.join(__dirname, "../public/index.html");
@@ -57,9 +58,9 @@ const handleData = (request, response, endpoint) => {
       response.end("A problem has occurred on our end - sorry folks!");
     } else {
       // process weather object with some js logic to produce final results
-      let result = JSON.stringify(weather);
+      let result = goOutDecision(weather);
       response.writeHead(200, { "content-type": "application/json" });
-      response.end(result);
+      response.end(JSON.stringify(result));
     }
   });
 };

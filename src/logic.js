@@ -1,6 +1,8 @@
-let decision = {};
-
-const goOutDecision = (weatherCode, sunrise, sunset) => {
+const goOutDecision = weather => {
+  let weatherCode = weather.weather[0].id.toString();
+  let sunrise = weather.sys.sunrise;
+  let sunset = weather.sys.sunset;
+  let decision = {};
   // If current time is before sunrise, or after sunset, then return decision no
   let timeStamp = Math.floor(new Date().getTime() / 1000);
   if (timeStamp < sunrise || sunset < timeStamp) {
@@ -41,4 +43,4 @@ const goOutDecision = (weatherCode, sunrise, sunset) => {
   return decision;
 };
 
-module.exports = { goOutDecision };
+module.exports = goOutDecision;
