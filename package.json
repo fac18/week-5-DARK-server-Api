@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node tests/*.test.js | tap-spec",
+    "test": "node tests/api.test.js | tap-spec",
     "start": "node src/server.js",
     "lint": "eslint ."
   },
@@ -13,8 +13,9 @@
   "license": "ISC",
   "devDependencies": {
     "eslint": "^6.7.1",
-    "tape": "^4.11.0",
-    "tap-spec": "^5.0.0"
+    "nock": "^11.7.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.11.0"
   },
   "dependencies": {}
 }
