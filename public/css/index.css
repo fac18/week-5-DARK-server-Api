@@ -1,16 +1,13 @@
 /* VARIABLES */
 :root {
-  --space-xxxxs: 0.45rem;
-  --space-xxxs: 0.73rem;
-  --space-xxs: 1.18rem;
-  --space-xs: 1.91rem;
-  --space-sm: 3.09rem;
-  --space-md: 5rem;
-  --space-lg: 8.09rem;
-  --space-xl: 13.09rem;
-  --space-xxl: 21.18rem;
-  --space-xxxl: 34.27rem;
-  --space-xxxxl: 55.4rem;
+  --space-xxs: 0.375rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+  --space-xl: 3.25rem;
+  --space-xxl: 5.25rem;
+  --space-xxxl: 8.5rem;
 
   --pastel-grey: #cad2c5;
   --granite-grey: #5c5d67;
@@ -25,7 +22,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  border: solid black 1px;
+  /* border: solid black 1px; */
 }
 
 body {
@@ -36,10 +33,12 @@ body {
 
 .flex-container-columns {
   display: flex;
+  text-align: center;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
+  align-content: center;
 }
 
 .flex-container-rows {
@@ -54,10 +53,16 @@ body {
 
 .main {
   font-family: "Quicksand", sans-serif;
+  text-align: center;
   background-color: var(--pale-cyan);
   opacity: 0.8;
-  margin: 1rem;
-  padding: 1rem;
+  margin: var(--space-md);
+  padding: var(--space-md);
+  border-radius: var(--space-sm);
+}
+
+.header__heading {
+  font-size: var(--space-xxl);
 }
 
 .search-form {
@@ -65,15 +70,19 @@ body {
 }
 
 .search-form__fieldset {
+  text-align: right;
   width: 80%;
 }
 
-.header__heading {
+.search-form__dropdown {
+  font-family: "Quicksand", sans-serif;
   font-size: var(--space-md);
 }
 
 .search-form__button {
-  /* width: 80%; */
+  font-family: "Quicksand", sans-serif;
+  font-size: var(--space-md);
+  /* font-size: var(--space-sm); */
 }
 
 /* RESULTS (INJECTED BY JS) */
@@ -81,4 +90,16 @@ body {
 .results {
   font-family: "Questrial", sans-serif;
   background-color: var(--sea-green);
+  text-align: center;
+  margin: var(--space-md);
+  padding: var(--space-md);
+  border-radius: var(--space-sm);
+}
+
+.results__answers {
+  font-size: var(--space-xl);
+}
+
+.results__reason {
+  font-size: var(--space-lg);
 }

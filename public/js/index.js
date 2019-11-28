@@ -1,5 +1,7 @@
 const selectBox = document.querySelector(".search-form__dropdown");
 const searchButton = document.querySelector(".search-form__button");
+const reason = document.querySelector(".results__reason");
+const answers = document.querySelector(".results__answers");
 
 const searchLocation = event => {
   event.preventDefault();
@@ -14,6 +16,11 @@ const searchLocation = event => {
         `I'm the result on of the frontend API call: ${JSON.stringify(result)}`
       );
       // do something with response (probably a DOM construction/injection)
+      let decision = result.yesno;
+      answers.textContent = decision;
+
+      let why = result.reason;
+      reason.textContent = why;
     }
   };
   xhr.open("GET", url, true);
