@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node tests/*.test.js | tap-spec",
-    "start": "node src/server.js",
+    "test": "tape tests/*.test.js | tap-spec",
+    "start": "nodemon src/server.js",
+    "coverage": "nyc tape tests/*.test.js | tap-spec",
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "lint": "eslint ."
   },
   "keywords": [],
@@ -15,6 +17,8 @@
     "eslint": "^6.7.1",
     "nock": "^11.7.0",
     "nodemon": "^2.0.1",
+    "supertest": "^4.0.2",
+    "nyc": "^14.1.1",
     "tap-spec": "^5.0.0",
     "tape": "^4.11.0"
   },
