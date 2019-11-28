@@ -3,31 +3,92 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="public/css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Questrial&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Should I Stay Home?</title>
   </head>
   <body>
-    <div class="flex-container" class="input-box">
-      <header>
-        <h1>Should I go out today?</h1>
+    <main class="main flex-container-columns">
+      <header class="header">
+        <h1 class="header__heading">SHOULD I GO OUT TODAY?</h1>
       </header>
-      <main>
-        <form>
-          <fieldset>
-            <legend name="location">Where are you?</legend>
-            <select id="location" name="location">
-              <option value="london">London</option>
-              <option value="paris">Paris</option>
-            </select>
-            <button id="search-button">SEARCH</button>
-          </fieldset>
-        </form>
-      </main>
-    </div>
-    <section class="flex-container">
-      <h2 class= 'answers'></h2>
-    <h3 class= 'reason'></h3>
+      <form class="search-form flex-container-rows">
+        <fieldset class="search-form__fieldset">
+          <legend class="search-form__legend" name="location">
+            Where are you?
+          </legend>
+          <select class="search-form__dropdown" id="location" name="location">
+            <option class="search-form__option" value="barcelona">
+              Barcelona, Spain
+            </option>
+            <option class="search-form__option" value="berlin">
+              Berlin, Germany
+            </option>
+            <option class="search-form__option" value="bogotá">
+              Bogotá, Columbia
+            </option>
+            <option class="search-form__option" value="california">
+              California, USA
+            </option>
+            <option class="search-form__option" value="caracas">
+              Caracas, Venezuela
+            </option>
+            <option class="search-form__option" value="dhaka">
+              Dhaka, Bangladesh
+            </option>
+            <option class="search-form__option" value="florida">
+              Florida, USA
+            </option>
+            <option class="search-form__option" value="hanoi">
+              Hanoi, Vietnam
+            </option>
+            <option class="search-form__option" value="london">
+              London, UK
+            </option>
+            <option class="search-form__option" value="manhattan">
+              Manhattan, USA
+            </option>
+            <option class="search-form__option" value="manila">
+              Manila, Philippines
+            </option>
+            <option class="search-form__option" value="mogadishu">
+              Mogadishu, Somalia
+            </option>
+            <option class="search-form__option" value="moscow">
+              Moscow, Russia
+            </option>
+            <option class="search-form__option" value="mumbai">
+              Mumbai, India
+            </option>
+            <option class="search-form__option" value="paris">
+              Paris, France
+            </option>
+            <option class="search-form__option" value="rome">
+              Rome, Italy
+            </option>
+            <option class="search-form__option" value="shanghai">
+              Shanghai, China
+            </option>
+            <option class="search-form__option" value="warsaw">
+              Warsaw, Poland
+            </option>
+          </select>
+          <button class="search-form__button">SEARCH</button>
+        </fieldset>
+      </form>
+    </main>
+    <section class="results flex-container">
+      <h2 class="results__answers">Hit search to find out!</h2>
+      <h3 class="results__reason"></h3>
     </section>
   </body>
-  <footer></footer>
+  <footer class="footer"></footer>
   <script type="text/javascript" src="public/js/index.js"></script>
 </html>
