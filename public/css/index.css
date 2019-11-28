@@ -10,4 +10,12 @@
     flex-direction: column;
 }
 
-
+.input-box {
+    height: 3.5em;
+    width: 15rem;
+    font-family: sans-serif;
+    padding-left: 1em;
+    margin: 0;
+    background-color: red;
+    font-family: 'Quicksand', sans-serif;
+}
