@@ -1,14 +1,14 @@
 const goOutDecision = weather => {
-    let weatherCode = weather.weather[0].id;
-    let sunrise = weather.sys.sunrise;
-    let sunset = weather.sys.sunset;
-    let decision = {};
-    // If current time is before sunrise, or after sunset, then return decision no
-    let timeStamp = Math.floor(new Date().getTime()/1000);
-    if ((timeStamp < sunrise) || (sunset < timeStamp)) {
-        decision.yesno = "No";
-        decision.reason = "It's dark and scary outside";
-    } else {
+  let weatherCode = weather.weather[0].id.toString();
+  let sunrise = weather.sys.sunrise;
+  let sunset = weather.sys.sunset;
+  let decision = {};
+  // If current time is before sunrise, or after sunset, then return decision no
+  let timeStamp = Math.floor(new Date().getTime() / 1000);
+  if (timeStamp < sunrise || sunset < timeStamp) {
+    decision.yesno = "No";
+    decision.reason = "It's dark and scary outside";
+  } else {
     // If current time is after sunrise and before sunset, then check weather
     if (weatherCode.startsWith("2")) {
       // Thunderstorm weather code
@@ -43,4 +43,4 @@ const goOutDecision = weather => {
   return decision;
 };
 
-module.exports = { goOutDecision };
+module.exports = goOutDecision;
