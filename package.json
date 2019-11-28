@@ -4,10 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node tests/*.test.js | tap-spec",
-    "test-api": "node tests/api.test.js | tap-spec",
-    "test-logic": "node tests/logic.test.js | tap-spec",
-    "test-server": "node tests/server.test.js | tap-spec",
+    "test": "tape tests/*.test.js | tap-spec",
     "start": "nodemon src/server.js",
     "coverage": "nyc tape tests/*.test.js | tap-spec",
     "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
