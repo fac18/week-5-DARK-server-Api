@@ -6,7 +6,7 @@ const https = require("https");
 const getRequest = (url, cb) => {
   // assign appropriate protocol depending on beginning of passed url
   let protocol = /^https/.test(url) ? https : http;
-  
+
   // use get method with whichever protocol is assigned
   protocol.get(url, res => {
     // initialise variables to pass to callback
@@ -45,7 +45,7 @@ const getRequest = (url, cb) => {
       resObj.body = JSON.parse(rawData);
       resObj.statusCode = statusCode;
       resObj.headers = {};
-      resObj.headers['content-type'] = contentType;
+      resObj.headers["content-type"] = contentType;
       cb(null, resObj);
     });
   });

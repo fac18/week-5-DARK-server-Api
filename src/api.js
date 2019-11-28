@@ -20,9 +20,9 @@ const grabWeather = location => {
       if (err) {
         console.log(err);
       } else {
-        weather = res; // capture response object in weather variable
+        weather = res.body; // capture response object in weather variable
         console.log(
-          `Weather for London,UK requested. Object returned: ${weather}`
+          `Weather for ${location} requested. Object returned: ${weather}`
         );
       }
     }
