@@ -1,6 +1,5 @@
-let decision = {};
-
 const goOutDecision = (weatherCode, sunrise, sunset) => {
+    let decision = {};
     // If current time is before sunrise, or after sunset, then return decision no
     let timeStamp = Math.floor(new Date().getTime()/1000);
     if ((timeStamp < sunrise) || (sunset < timeStamp)) {
