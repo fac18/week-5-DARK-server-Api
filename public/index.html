@@ -6,27 +6,27 @@
     <title>Should I Stay Home?</title>
   </head>
   <body>
-    <div class="flex-container" class="input-box">
-      <header>
-        <h1>Should I go out today?</h1>
+    <main class="flex-container-columns">
+      <header class="header">
+        <h1 class="header__heading">Should I go out today?</h1>
       </header>
-      <main>
-        <form>
-          <fieldset>
-            <legend name="location">Where are you?</legend>
-            <select id="location" name="location">
-              <option value="london">London</option>
-              <option value="paris">Paris</option>
-            </select>
-            <button id="search-button">SEARCH</button>
-          </fieldset>
-        </form>
-      </main>
-    </div>
-    <section class="flex-container">
-      <h2></h2>
+      <form class="search-form">
+        <fieldset class="search-form__fieldset">
+          <legend class="search-form__legend" name="location">
+            Where are you?
+          </legend>
+          <select class="search-form__dropdown" id="location" name="location">
+            <option class="search-form__option" value="london">London</option>
+            <option class="search-form__option" value="paris">Paris</option>
+          </select>
+          <button id="search-form__button">SEARCH</button>
+        </fieldset>
+      </form>
+    </main>
+    <section class="results flex-container">
+      <h2 class="results__header"></h2>
     </section>
   </body>
-  <footer></footer>
+  <footer class="footer"></footer>
   <script type="text/javascript" src="public/js/index.js"></script>
 </html>

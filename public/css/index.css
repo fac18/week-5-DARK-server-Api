@@ -1,21 +1,36 @@
+/* add colour and spacing variables */
+:root {
+  --space-xxxxs: 0.45rem;
+  --space-xxxs: 0.73rem;
+  --space-xxs: 1.18rem;
+  --space-xs: 1.91rem;
+  --space-sm: 3.09rem;
+  --space-md: 5rem;
+  --space-lg: 8.09rem;
+  --space-xl: 13.09rem;
+  --space-xxl: 21.18rem;
+  --space-xxxl: 34.27rem;
+  --space-xxxxl: 55.4rem;
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-
-.flex-container {
-    display: flex; 
-    flex-direction: column;
+.flex-container-columns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.input-box {
-    height: 3.5em;
-    width: 15rem;
-    font-family: sans-serif;
-    padding-left: 1em;
-    margin: 0;
-    background-color: red;
-    font-family: 'Quicksand', sans-serif;
+.search-form {
+  font-family: "Quicksand", sans-serif;
+  height: 3.5em;
+  width: 15rem;
+  font-family: sans-serif;
+  padding-left: 1em;
+  margin: 0;
 }
