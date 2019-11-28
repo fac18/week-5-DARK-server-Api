@@ -28,7 +28,6 @@ tape("api request for London,UK works as expected", t => {
       if (err) {
         console.log(err);
       } else {
-        console.log(res);
         t.equal(res.statusCode, 200, "status code should be 200");
         t.equal(
           res.headers["content-type"],
