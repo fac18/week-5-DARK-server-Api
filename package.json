@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node tests/api.test.js | tap-spec",
-    "start": "nodemon src/server.js",
+    "start": "node src/server.js",
     "lint": "eslint ."
   },
   "keywords": [],

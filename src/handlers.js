@@ -2,6 +2,7 @@ const path = require("path");
 const fs = require("fs");
 const grabWeather = require("./api");
 const goOutDecision = require("./logic");
+// const env = require("dotenv").config();
 
 const handleHome = (request, response) => {
   const filePath = path.join(__dirname, "../public/index.html");
