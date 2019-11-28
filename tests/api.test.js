@@ -2,11 +2,9 @@
 
 const nock = require("nock");
 const tape = require("tape");
-const config = require("../src/config");
 const getRequest = require("../src/request");
-const grabWeather = require("../src/api");
 
-let apiKey = config.MY_WEATHER_KEY;
+let apiKey = process.env.MY_WEATHER_KEY;
 
 tape("api test file is working", t => {
   t.equals(1, 1, "1 should be 1");

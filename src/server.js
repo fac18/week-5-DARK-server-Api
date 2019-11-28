@@ -7,4 +7,5 @@ const hostname = process.env.HOSTNAME || "localhost";
 const server = http.createServer(router);
 server.listen(port, () => {
   console.log(`server up and running on ${hostname}:${port}`);
+  console.log("weather key", process.env.MY_WEATHER_KEY);
 });
