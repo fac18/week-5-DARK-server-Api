@@ -1,6 +1,6 @@
 const path = require("path");
 const fs = require("fs");
-const api = require("./api");
+const grabWeather = require("./api");
 
 const handleHome = (request, response) => {
   const filePath = path.join(__dirname, "../public/index.html");
@@ -48,6 +48,34 @@ const handlePublic = (request, response, endpoint) => {
   });
 };
 
-const handleData = (request, response, endpoint) => {};
+const handleData = (request, response, endpoint) => {
+  const location = endpoint.split("=")[1];
+  grabWeather(location, (err, weather) => {
+    if (err) {
+      console.log(err);
+      response.writeHead(500, { "content-type": "text/html" });
+      response.end("A problem has occurred on our end - sorry folks!");
+    } else {
+      // process weather object with some js logic to produce final results
+      let result = JSON.stringify(weather);
+      response.writeHead(200, { "content-type": "application/json" });
+      response.end(result);
+    }
+  });
+};
 
-module.exports = { handleHome, handlePublic };
+const handle404 = (request, response) => {
+  let filePath = path.join(__dirname, "../public/not-found.html");
+  fs.readFile(filePath, (err, file) => {
+    if (err) {
+      console.log(err);
+      response.writeHead(500, { "content-type": "text/html" });
+      response.end("A problem has occurred on our end - sorry folks!");
+    } else {
+      response.writeHead(404, { "content-type": "text/html" });
+      response.end(file);
+    }
+  });
+};
+
+module.exports = { handleHome, handlePublic, handleData, handle404 };
