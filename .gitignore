@@ -1,5 +1,5 @@
 node_modules
-
+.nyc_output
 .ds_store
 npm-debug.log
 src/config.js
