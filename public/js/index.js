@@ -1,5 +1,5 @@
-const selectBox = document.querySelector("#location");
-const searchButton = document.querySelector("#search-form__button");
+const selectBox = document.querySelector(".search-form__dropdown");
+const searchButton = document.querySelector(".search-form__button");
 
 const searchLocation = event => {
   event.preventDefault();
