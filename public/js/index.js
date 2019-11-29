@@ -6,16 +6,19 @@ const answers = document.querySelector(".results__answers");
 
 const searchLocation = event => {
   event.preventDefault();
-  const xhr = new XMLHttpRequest();
-  const url = "/search?location=" + selectBox.value;
-  xhr.onreadystatechange = () => {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      const result = JSON.parse(xhr.responseText);
-    appendResults(result);
+  let selectedCity = document.querySelector(`#location > option:nth-child(${(selectBox.selectedIndex)+1})`);
+  if (selectedCity.textContent !== " -- select a location -- ") {
+    const xhr = new XMLHttpRequest();
+    const url = "/search?location=" + selectBox.value;
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+        const result = JSON.parse(xhr.responseText);
+        appendResults(result);
+        }
+    };
+    xhr.open("GET", url, true);
+    xhr.send();
     }
-  };
-  xhr.open("GET", url, true);
-  xhr.send();
 };
 
 searchButton.addEventListener("click", searchLocation);
