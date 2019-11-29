@@ -26,8 +26,31 @@
 }
 
 body {
-  background-color: var(--granite-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url("./images/rain.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: var(--granite-grey); */
+  border: 0;
+  margin: 0;
+  min-height: 100vh;
 }
+
+/* body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #b3e2ff;
+  background-image: url("./images/rain.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 0;
+  margin: 0;
+} */
 
 /* ADDITIONAL CLASSES */
 
@@ -36,17 +59,13 @@ body {
   text-align: center;
   flex-direction: column;
   flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
 }
 
 .flex-container-rows {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
+  justify-content: center; 
 }
 
 /* MAIN (HEADER AND SEARCH FORM) */
@@ -54,15 +73,20 @@ body {
 .main {
   font-family: "Quicksand", sans-serif;
   text-align: center;
-  background-color: var(--pale-cyan);
+  background-color: white;
   opacity: 0.8;
-  margin: var(--space-md);
-  padding: var(--space-md);
+  margin: var(--space-lg);
+  padding: var(--space-lg);
   border-radius: var(--space-sm);
 }
 
+.main:hover {
+  opacity: 1;
+  box-shadow: 0px 3px 8px 3px #024b75;
+}
+
 .header__heading {
-  font-size: var(--space-xxl);
+  font-size: var(--space-xl);
 }
 
 .search-form {
@@ -70,18 +94,28 @@ body {
 }
 
 .search-form__fieldset {
-  text-align: right;
   width: 80%;
 }
 
 .search-form__dropdown {
   font-family: "Quicksand", sans-serif;
-  font-size: var(--space-md);
+  font-size: var(--space-lg);
+}
+
+ legend {
+  font-size: var(--space-lg);
 }
 
 .search-form__button {
-  font-family: "Quicksand", sans-serif;
-  font-size: var(--space-md);
+  background-color: #024b75;
+  color: white;
+  font-size: 1.5em;
+  border-radius: 50%;
+  border: none;
+  padding: 0.25em;
+  border-style: solid;
+  cursor: pointer;
+
   /* font-size: var(--space-sm); */
 }
 
@@ -107,3 +141,4 @@ body {
 .results__reason {
   font-size: var(--space-lg);
 }
+
