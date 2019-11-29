@@ -102,7 +102,7 @@ body {
   font-size: var(--space-lg);
 }
 
-.search-icon {
+.search-form__button {
   background-color: #024b75;
   color: white;
   font-size: 1.5em;
@@ -111,6 +111,7 @@ body {
   padding: 0.25em;
   border-style: solid;
   cursor: pointer;
+
   /* font-size: var(--space-sm); */
 }
 
