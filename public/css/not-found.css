@@ -28,26 +28,32 @@
 
 .main {
   height: 90vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
   text-align: center;
-  display: grid;
-  grid-template-rows: 1fr 3fr 1fr;
-  justify-content: center;
   font-family: "Quicksand", sans-serif;
 }
 
 .headline {
-  font-size: var(--space-xxl);
-}
-
-.gif-link {
+  margin: var(--space-lg) var(--space-md) var(--space-sm);
+  font-size: var(--space-xl);
 }
 
 .gif {
-  width: 90vw;
-  margin: 0;
-  padding: 0;
+  height: 90%;
+}
+
+.gif__link {
+}
+
+.gif__img {
+  margin: 0 var(--space-md);
+  height: 90%;
 }
 
 .text {
-  font-size: var(--space-xl);
+  margin: var(--space-sm) var(--space-md) 0;
+  font-size: var(--space-lg);
 }
