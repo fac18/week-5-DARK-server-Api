@@ -59,10 +59,6 @@ body {
   text-align: center;
   flex-direction: column;
   flex-wrap: nowrap;
-  /* align-items: center; */
-  /* justify-content: center;
-  align-content: center;
-  text-align: center; */
 }
 
 .flex-container-rows {
@@ -84,6 +80,11 @@ body {
   border-radius: var(--space-sm);
 }
 
+.main:hover {
+  opacity: 1;
+  box-shadow: 0px 3px 8px 3px #024b75;
+}
+
 .header__heading {
   font-size: var(--space-xxl);
 }
@@ -101,9 +102,15 @@ body {
   font-size: var(--space-lg);
 }
 
-.search-form__button {
-  font-family: "Quicksand", sans-serif;
-  font-size: var(--space-lg);
+.search-icon {
+  background-color: #024b75;
+  color: white;
+  font-size: 1.5em;
+  border-radius: 50%;
+  border: none;
+  padding: 0.25em;
+  border-style: solid;
+  cursor: pointer;
   /* font-size: var(--space-sm); */
 }
 
