@@ -96,6 +96,10 @@ body {
   border-radius: var(--space-sm);
 }
 
+.results__city {
+  font-size: var(--space-md);
+}
+
 .results__answers {
   font-size: var(--space-xl);
 }
