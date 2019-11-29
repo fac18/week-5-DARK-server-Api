@@ -28,7 +28,8 @@
           <legend class="search-form__legend" name="location">
             Where are you?
           </legend>
-          <select class="search-form__dropdown" id="location" name="location">
+          <select aria-label="Location Selection Dropdown" class="search-form__dropdown" id="location" name="location">
+            <option disabled selected value> -- select a location -- </option>
             <option class="search-form__option" value="barcelona">
               Barcelona, Spain
             </option>
@@ -92,6 +93,7 @@
       </form>
     </main>
     <section class="results flex-container">
+      <h4 class="results__city"></h4>
       <h2 class="results__answers">Hit search to find out!</h2>
       <h3 class="results__reason"></h3>
       <img class = "results__gif" src="">

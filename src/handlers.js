@@ -27,7 +27,8 @@ const handlePublic = (request, response, endpoint) => {
     ico: "image/x-icon",
     svg: "image/svg+xml",
     jpeg: "image/jpeg", 
-    jpg: "image/jpg"
+    jpg: "image/jpg", 
+    gif: "image/gif"
   };
   const filePath = path.join(__dirname, "..", endpoint);
   fs.readFile(filePath, (error, file) => {
