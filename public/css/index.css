@@ -73,7 +73,7 @@ body {
 .main {
   font-family: "Quicksand", sans-serif;
   text-align: center;
-  background-color: var(--pale-cyan);
+  background-color: white;
   opacity: 0.8;
   margin: var(--space-lg);
   padding: var(--space-lg);
@@ -86,7 +86,7 @@ body {
 }
 
 .header__heading {
-  font-size: var(--space-xxl);
+  font-size: var(--space-xl);
 }
 
 .search-form {
@@ -99,6 +99,10 @@ body {
 
 .search-form__dropdown {
   font-family: "Quicksand", sans-serif;
+  font-size: var(--space-lg);
+}
+
+ legend {
   font-size: var(--space-lg);
 }
 
