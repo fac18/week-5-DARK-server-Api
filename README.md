@@ -1,3 +1,9 @@
+# SHOULD I GO OUTSIDE?
+
+![](https://api.travis-ci.org/fac18/week-5-DARK-server-Api.svg?branch=master)
+
+---
+
 ## Team DARK! 
 (Dan Ayub Rosa Kin)
 
